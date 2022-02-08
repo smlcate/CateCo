@@ -1,0 +1,157 @@
+<div class="parentDivs" id="homeParentDiv">
+
+  <div class="homeDivs" id="welcomeHomeDiv">
+
+    <div class="" id="titleContainer">
+      <h1>CateCo</h1>
+      <p><span id="titleA">High Quality</span><span id="titleB"> Freelance</span><span id="titleC"> Website Development</span></p>
+    </div>
+
+    <div class="" id="titleNavContainer">
+
+      <a id="websitesAnc" href="">
+        <p>Build a Website</p>
+        <svg class="arrow-icon" id="" xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" fill="#A3C4BC"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/></svg>
+      </a>
+
+      <a id="workAnc" href="">
+        <p>Past Work</p>
+        <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" fill="#A3C4BC"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/></svg>
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="homeNavSplitters" id="welcomeNavSplitter">
+    <a href="">
+      <p>T</p>
+      <p>o</p>
+      <p>p</p>
+    </a>
+  </div>
+
+  <div class="homeDivs" id="websitesHomeDiv">
+
+    <h2>Schedule a Meeting</h2>
+
+    <div class="" id="websitesHomeDivDisplay">
+
+      <div class="websitesHomeDivContainers" id="websitesHomeDivInfoContainer">
+        <p>I build high quality, professionally developed websites and web applications. Whether you are a hobbiest interested in a single page blog, a shop owner looking for an e-commerce website, or a business needing a platform to manage events; Reach out to me and let's get started on your next project.</p>
+        <p>You can schedule a meeting here or send me an <a href="">email</a> if you have any quick questions.</p>
+      </div>
+
+      <div class="websitesHomeDivContainers" id="websitesHomeDivNavContainer">
+        <div class="" id="websitesScheduleDisplay">
+          <div id="scheduleHeader">
+            <h3 ng-if="selectedScheduleDay == null">{{schedule[0].displayMonth}}</h3>
+            <h3 ng-if="selectedScheduleDay != null">{{selectedScheduleDay.displayMonth}}</h3>
+
+          </div>
+          <p id="weekDay0" class="weekDays">Sun</p>
+          <p id="weekDay1" class="weekDays">Mon</p>
+          <p id="weekDay2" class="weekDays">Tue</p>
+          <p id="weekDay3" class="weekDays">Wed</p>
+          <p id="weekDay4" class="weekDays">Thu</p>
+          <p id="weekDay5" class="weekDays">Fri</p>
+          <p id="weekDay6" class="weekDays">Sat</p>
+          <div id="scheduleDayCell{{$index}}" class="scheduleDayCells" ng-repeat="s in schedule track by $index" >
+            <div class="scheduleDayManagerDateDisplays">
+              <div ng-click="selectScheduleDay(s, $index)" class="scheduleDayCellDateDisplay">
+                <a href="" class="scheduleDayCellTexts" ng-if="s.day > 0">{{s.day}}</a>
+                <p class="scheduleDayDeadCells" ng-if="s.day <= 0 && s.displayDate > 0">{{s.displayDate}}</p>
+              </div>
+
+              <a class="continueToScheduleFormAncs" ng-if="formContinue == false" href="" ng-click="continueToScheduleInfoForm()">Continue</a>
+              <a class="exitScheduleFormAncs" ng-if="formContinue == true" href="" ng-click="exitScheduleInfoForm()">Back</a>
+
+            </div>
+            <!-- <div id="scheduleDayManagerToolDiv{{$index}}" class="scheduleDayManagerToolDivs">
+            </div> -->
+            <!-- <div class="dayCellHeaders">
+              <p class="dayCellHeaderHeaders" ng-if="$index == 0">{{s.displayMonth}}</p>
+              <p>{{s.displayDay}}</p>
+              <p class="dayCellDates">{{s.day}}</p>
+            </div>
+            <div id="dayTimeSlotDisplayContainer{{$index}}" class="dayTimeSlotDisplayContainers">
+              <div class="dayTimeSlotsDisplays" ng-repeat="slot in s.timeslots">
+                <p class="minifiedHourCells" ng-if="slot.min == 0 && slot.hour < 12">{{slot.hour}}am</p>
+                <p class="minifiedHourCells" ng-if="slot.min == 0 && slot.hour == 12">{{slot.hour}}pm</p>
+                <p class="minifiedHourCells" ng-if="slot.min == 0 && slot.hour > 12">{{slot.hour - 12}}pm</p>
+                <p class="minifiedHourCells" ng-if="slot.min == 0 && slot.hour == 24">{{slot.hour - 12}}am</p>
+                <p class="minifiedMinuteCells" ng-if="slot.min != 0">:{{slot.min}}</p>
+              </div>
+            </div> -->
+            <div id="scheduleDayManagerDisplay{{$index}}" class="scheduleDayManagerDisplays">
+              <a href="" id="scheduleDayManagerTimeslot{{$index}}" class="scheduleDayManagerTimeslots" ng-repeat="slot in s.timeslots track by $index" ng-click="selectScheduleDayTimeslot(slot, $index)">
+                <p class="timeslotHours" ng-if="$index % 4 == 0 && slot.hour < 12">{{slot.hour}}am</p>
+                <p class="timeslotHours" ng-if="$index % 4 == 0 && slot.hour == 12">{{slot.hour}}pm</p>
+                <p class="timeslotHours" ng-if="$index % 4 == 0 && slot.hour > 12">{{slot.hour-12}}pm</p>
+
+                <p class="timeslotMins" ng-if="$index % 4 != 0">:{{slot.min}}</p>
+
+              </a>
+            </div>
+            <div ng-if="selectedTimeIndex != null && formContinue == true" id="scheduleDayInfoForm" class="scheduleDayInfoForms">
+              <div id="scheduleDayInfoFormTimeText">
+                <p ng-if="selectedScheduleDay.timeslots[selectedTimeIndex].hour < 12">{{selectedScheduleDay.timeslots[selectedTimeIndex].hour}}:{{selectedScheduleDay.timeslots[selectedTimeIndex].min}}</p>
+                <p ng-if="selectedScheduleDay.timeslots[selectedTimeIndex].hour == 12">{{selectedScheduleDay.timeslots[selectedTimeIndex].hour}}:{{selectedScheduleDay.timeslots[selectedTimeIndex].min}}</p>
+                <p ng-if="selectedScheduleDay.timeslots[selectedTimeIndex].hour > 12">{{selectedScheduleDay.timeslots[selectedTimeIndex].hour-12}}:{{selectedScheduleDay.timeslots[selectedTimeIndex].min}}</p>
+
+                <p ng-if="selectedScheduleDay.timeslots[selectedTimeIndex].min == 0">0</p>
+                <p ng-if="selectedScheduleDay.timeslots[selectedTimeIndex].hour < 12">am<p>
+                <p ng-if="selectedScheduleDay.timeslots[selectedTimeIndex].hour >= 12">pm<p>
+
+                <p> — </p>
+
+                <p ng-if="selectedScheduleDay.timeslots[selectedTimeIndex + 3].hour <= 12 && selectedScheduleDay.timeslots[selectedTimeIndex + 3].min != 45">{{selectedScheduleDay.timeslots[selectedTimeIndex + 3].hour}}:{{selectedScheduleDay.timeslots[selectedTimeIndex + 3].min + 15}}</p>
+
+                <p ng-if="selectedScheduleDay.timeslots[selectedTimeIndex + 3].hour > 12 && selectedScheduleDay.timeslots[selectedTimeIndex + 3].min != 45">{{selectedScheduleDay.timeslots[selectedTimeIndex + 3].hour-12}}:{{selectedScheduleDay.timeslots[selectedTimeIndex + 3].min + 15}}</p>
+
+                <p ng-if="selectedScheduleDay.timeslots[selectedTimeIndex + 3].hour < 12 && selectedScheduleDay.timeslots[selectedTimeIndex + 3].min == 45">{{selectedScheduleDay.timeslots[selectedTimeIndex + 3].hour+1}}:00</p>
+                <p ng-if="selectedScheduleDay.timeslots[selectedTimeIndex + 3].hour == 12 && selectedScheduleDay.timeslots[selectedTimeIndex + 3].min == 45">{{selectedScheduleDay.timeslots[selectedTimeIndex + 3].hour-11}}:00</p>
+                <p ng-if="selectedScheduleDay.timeslots[selectedTimeIndex + 3].hour > 12 && selectedScheduleDay.timeslots[selectedTimeIndex + 3].min == 45">{{selectedScheduleDay.timeslots[selectedTimeIndex + 3].hour-11}}:00</p>
+
+                <p ng-if="selectedScheduleDay.timeslots[selectedTimeIndex + 3].hour < 11">am<p>
+                <p ng-if="selectedScheduleDay.timeslots[selectedTimeIndex + 3].hour == 11 && selectedScheduleDay.timeslots[selectedTimeIndex + 3].min == 45">pm<p>
+                <p ng-if="selectedScheduleDay.timeslots[selectedTimeIndex + 3].hour >= 12">pm<p>
+
+              </div>
+
+              <div class="" id="scheduleDayInfoFormInputDiv">
+                <input type="text" name="" value="" placeholder="Email">
+                <input type="text" name="" value="" placeholder="Name">
+                <textarea type="text" name="" value="" placeholder="A brief statement of what you're wanting to discuss"></textarea>
+                <p>I will send a confimation email where we can discuss whether you want to talk over phone or Zoom. Also, feel free to send me an email at anytime until then if you have any questions or concerns.</p>
+                <a href="">Submit</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- <div class="homeNavSplitters" id="workNavSplitter">
+    <a href="">
+      <p>Past Work</p>
+    </a>
+  </div>
+
+  <div class="homeNavSplitters" id="websitesNavSplitter">
+    <a href="">
+      <p>Build a Website</p>
+    </a>
+  </div> -->
+
+  <div class="homeDivs" id="workHomeDiv">
+
+
+
+  </div>
+
+</div>

@@ -1,0 +1,531 @@
+@font-face {
+  font-family: 'LouisGeorgeCafe';
+  src: url('../fonts/louis_george_caf/Louis George Cafe.ttf'); /* IE9 Compat Modes */
+  font-style:normal;
+  font-weight: 100;
+}
+
+body {
+  margin: 0px;
+  background: #001524;
+  font-family: 'LouisGeorgeCafe'
+}
+
+.homeDivs {
+  height: 90vh;
+}
+
+#welcomeHomeDiv {
+  height: 100vh;
+  font-size: 2em;
+  color: #cdf0e7;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#titleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#welcomeHomeDiv h1 {
+  font-size: 5.5em;
+  margin: 0px;
+  text-shadow:
+    0 0 7px #dff,
+    0 0 10px #Dff,
+    0 0 21px #Bff,
+    0 0 42px #0ff;
+    /* 0 0 82px #0ff,
+    0 0 92px #0ff,
+    0 0 102px #0ff,
+    0 0 151px #0ff; */
+  font-weight: bold;
+}
+
+#titleContainer p {
+  font-size:1.5em;
+  margin: 0px;
+  text-shadow:
+    0 0 7px #dff,
+    0 0 10px #Bff,
+    0 0 21px #0ff;
+  font-weight: bold;
+}
+#titleA {
+  color:#347FC4;
+  text-shadow:
+    0 0 7px #dff,
+    0 0 10px #81c1ff,
+    0 0 21px #62a4ed,
+    0 0 42px #62a4ed;
+    /* 0 0 82px #0ff,
+    0 0 92px #0ff,
+    0 0 102px #0ff,
+    0 0 151px #0ff; */
+}
+#titleB {
+  color:#EF5B5B;
+  text-shadow:
+    0 0 7px #ff9d96,
+    0 0 10px #EF5B5B,
+    0 0 21px #EF5B5B,
+    0 0 42px #EF5B5B;
+    /* 0 0 82px #0ff,
+    0 0 92px #0ff,
+    0 0 102px #0ff,
+    0 0 151px #0ff; */
+}
+#titleC {
+  color:#7a5980;
+  text-shadow:
+  0 0 7px #bc9bc8,
+  0 0 10px #bc9bc8,
+  0 0 21px #bc9bc8,
+  0 0 42px #bc9bc8,
+  0 0 82px #be9ac4;
+}
+
+#titleNavContainer {
+  height: 40vh;
+  width: 100vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content:center;
+  font-size:1.5em;
+  color: #A3C4BC;
+}
+#titleNavContainer a {
+  width: 50%;
+  text-align: center;
+  text-decoration: none;
+  color: #A3C4BC;
+  font-weight: bold;
+
+}
+
+#titleNavContainer .arrow-icon {
+  height: 1.5em;
+  width: 1.5em;
+}
+
+#titleNavContainer #websitesAnc p {
+  animation-name: websitesTextAncAnimRev;
+  animation-duration: 1.5s;
+}
+#titleNavContainer #websitesAnc:hover p {
+  animation-duration: 1.5s;
+  animation-name: websitesTextAncAnim;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes websitesTextAncAnim {
+  100% {
+    color: #7A5980;
+    text-shadow:
+      0 0 7px #bc9bc8,
+      0 0 10px #bc9bc8,
+      0 0 21px #bc9bc8,
+      0 0 42px #bc9bc8,
+      0 0 82px #be9ac4;
+      animation-play-state: paused;
+  }
+}
+@keyframes websitesTextAncAnimRev {
+  from {
+    color: #7A5980;
+    text-shadow:
+      0 0 7px #bc9bc8,
+      0 0 10px #bc9bc8,
+      0 0 21px #bc9bc8,
+      0 0 42px #bc9bc8,
+      0 0 82px #be9ac4;
+  }
+  to {
+    color: #A3C4BC;
+    text-shadow: none;
+  }
+}
+
+#titleNavContainer #websitesAnc .arrow-icon {
+  height: 1.5em;
+  width: 1.5em;
+}
+#titleNavContainer #websitesAnc:hover .arrow-icon {
+  animation-duration: 2s;
+  animation-name: websitesArrowAncAnim;
+  animation-fill-mode: forwards;
+}
+
+@keyframes websitesArrowAncAnim {
+  100% {
+    fill: #7A5980;
+  }
+}
+
+#titleNavContainer #websitesAnc svg {
+  animation-name: websitesArrowAncAnimRev;
+  animation-duration: 1.5s;
+}
+#titleNavContainer #websitesAnc:hover svg {
+  animation-duration: 1.5s;
+  animation-name: websitesArrowAncAnim;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes websitesArrowAncAnim {
+  100% {
+    fill: #7A5980;
+  }
+}
+@keyframes websitesArrowAncAnimRev {
+  from {
+    fill: #7A5980;
+  }
+  to {
+    fill: #A3C4BC;
+  }
+}
+
+#titleNavContainer #workAnc p {
+  animation-name: workTextAncAnimRev;
+  animation-duration: 1.5s;
+}
+#titleNavContainer #workAnc:hover p {
+  animation-duration: 1.5s;
+  animation-name: workTextAncAnim;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes workTextAncAnim {
+  100% {
+    color:#347FC4;
+    text-shadow:
+      0 0 7px #dff,
+      0 0 10px #81c1ff,
+      0 0 21px #62a4ed,
+      0 0 42px #62a4ed;
+  }
+}
+@keyframes workTextAncAnimRev {
+  from {
+    color:#347FC4;
+    text-shadow:
+      0 0 7px #dff,
+      0 0 10px #81c1ff,
+      0 0 21px #62a4ed,
+      0 0 42px #62a4ed;
+  }
+  to {
+    color: #A3C4BC;
+    text-shadow: none;
+  }
+}
+
+/* #titleNavContainer #workAnc .arrow-icon {
+  height: 1.5em;
+  width: 1.5em;
+}
+#titleNavContainer #workAnc:hover .arrow-icon {
+  animation-duration: 2s;
+  animation-name: workArrowAncAnim;
+  animation-fill-mode: forwards;
+}
+
+@keyframes workArrowAncAnim {
+  100% {
+    fill: #7A5980;
+  }
+} */
+
+#titleNavContainer #workAnc svg {
+  animation-name: workArrowAncAnimRev;
+  animation-duration: 1.5s;
+}
+#titleNavContainer #workAnc:hover svg {
+  animation-duration: 1.5s;
+  animation-name: workArrowAncAnim;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes workArrowAncAnim {
+  100% {
+    fill:#347FC4;
+  }
+}
+@keyframes workArrowAncAnimRev {
+  from {
+    fill: #347FC4;
+  }
+  to {
+    fill: #A3C4BC;
+  }
+}
+
+.homeNavSplitters {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:1.5em;
+  color: #A3C4BC;
+  font-weight: bold;
+}
+.homeNavSplitters a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #A3C4BC;
+  font-weight: bold;
+}
+#websitesHomeDiv {
+  background: #7A5980;
+  color: #001524;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  font-size:2em;
+}
+#websitesHomeDiv h2 {
+  width: 100vw;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+}
+#websitesHomeDivDisplay {
+  display: flex;
+  flex-wrap: wrap;
+  background: #A3C4BC;
+  width: 100vw;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.8);
+}
+.websitesHomeDivContainers {
+  padding: 30px;
+  margin-top: 0px;
+  min-height: 400px;
+}
+#websitesHomeDivInfoContainer {
+  width: 50vw;
+}
+#websitesHomeDivNavContainer {
+  width: 40vw;
+}
+#websitesScheduleDisplay {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  color: #001524;
+  width: 15em;
+  height: 14.5em;
+  background: rgba(122, 89, 128, 0.5);
+  border-radius:10px;
+  padding: .5em;
+}
+#scheduleHeader {
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 0px;
+}
+#scheduleHeader h3 {
+  height: 1em;
+  margin: 0px;
+  font-weight: bold;
+}
+.weekDays {
+  width: 2.1277em;
+  margin: 0px;
+  font-size:1em;
+  text-align:center;
+}
+.scheduleDayCells {
+  /* width: 6em; */
+  text-decoration: none;
+  font-weight: bold;
+  /* border: 1px solid #001524; */
+  min-width: 2.1277em;
+  height:2em;
+  text-align: end;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0px 1px 1px #222);
+}
+.scheduleDayCellDateDisplay:hover .scheduleDayCellTexts {
+  font-size: 1.5em;
+  filter: drop-shadow(0px 2px 2px #222);
+}
+.scheduleDayCellTexts {
+  color: #347FC4;
+  /* height: 2.5em; */
+  width: 1em;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scheduleDayDeadCells {
+  color: #001524;
+}
+
+.continueToScheduleFormAncs {
+  display: none;
+  font-size:.5em;
+  text-decoration: none;
+}
+.exitScheduleFormAncs {
+  font-size:.5em;
+  text-decoration: none;
+}
+.scheduleDayManagerDisplays {
+  display:none;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /* justify-content:space-between; */
+  align-items:center;
+  font-size: 1em;
+  height: 7em;
+  width: 50%;
+  margin-top:3em;
+  margin-right: -1em;
+}
+.scheduleDayManagerDateDisplays {
+  display:flex;
+  flex-direction: column;
+}
+.scheduleDayManagerTimeslots {
+  width: 1.25em;
+  margin-right: .25em;
+  margin-top: 0px;
+  /* display: flex; */
+  /* justify-content: flex-start; */
+  text-decoration: none;
+
+}
+.scheduleDayManagerTimeslots:hover {
+  background: lightgreen;
+}
+.scheduleDayManagerTimeslots p {
+  /* margin-top: -.3em; */
+}
+.timeslotHours {
+  font-size: .5em;
+  margin: 0px;
+  border-bottom: 2px dotted #001524;
+  height: 1.25em;
+}
+.timeslotMins {
+  font-size: .25em;
+  margin: 0px;
+  border-bottom: 1px dotted #001524;
+  /* margin-top: -1px; */
+  height: 1.25em;
+}
+
+#scheduleDayInfoForm {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3em;
+}
+.scheduleDayInfoForms {
+  font-size:.5em;
+  height: 7em;
+  width: auto;
+  margin-top: -2em;
+}
+.scheduleDayInfoForms input {
+  width: 100%;
+  font-size:.75em;
+}
+.scheduleDayInfoForms textarea {
+  width: 100%;
+  min-height:7em;
+  font-size:.75em;
+}
+#scheduleDayInfoFormInputDiv p {
+  font-size:.5em;
+  text-align:start;
+  width: 20em;
+  margin-top: 0px;
+}
+#scheduleDayInfoFormInputDiv a {
+  margin-top:-2em;
+  text-decoration: none;
+}
+#scheduleDayInfoFormTimeText {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.dayCellHeaders {
+  height: 4em;
+  width: 4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #001524;
+  /* border-bottom: 1px solid #001524; */
+}
+.dayCellHeaderHeaders {
+  height: .4em;
+  margin:0px;
+  opacity: 0.4;
+}
+.dayCellDates {
+  position: absolute;
+  color: #347FC4;
+  font-size:3em;
+  opacity: .4;
+}
+.dayTimeSlotDisplayContainers {
+  height: 16em;
+  overflow:scroll;
+  color: #001524;
+  display: none;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+.dayTimeSlotsDisplays {
+  display: flex;
+}
+.dayTimeSlotsDisplays p {
+  width: 100%;
+}
+.minifiedHourCells {
+  margin: 0px;
+  border-bottom: 2px dotted #001524;
+
+}
+.minifiedMinuteCells {
+  margin: 0px;
+  font-size:.5em;
+  border-bottom: 1px dotted #001524;
+}
+#websitesNavSplitter {
+  background: #7A5980;
+}
+#workHomeDiv {
+  background: #347FC4;
+  height:90vh
+}
+#workNavSplitter {
+  background: #347FC4;
+}
