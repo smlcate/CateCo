@@ -120,11 +120,11 @@
               </div>
 
               <div class="" id="scheduleDayInfoFormInputDiv">
-                <input type="text" name="" value="" placeholder="Email">
-                <input type="text" name="" value="" placeholder="Name">
-                <textarea type="text" name="" value="" placeholder="A brief statement of what you're wanting to discuss"></textarea>
+                <input type="text" name="" value="" placeholder="Email" ng-model="toMeet.email">
+                <input type="text" name="" value="" placeholder="Name" ng-model="toMeet.name">
+                <textarea type="text" name="" value="" ng-model="toMeet.summary" placeholder="A brief statement of what you're wanting to discuss"></textarea>
                 <p>I will send a confimation email where we can discuss whether you want to talk over phone or Zoom. Also, feel free to send me an email at anytime until then if you have any questions or concerns.</p>
-                <a href="">Submit</a>
+                <a href="" ng-click="addToSchedule()">Submit</a>
               </div>
 
             </div>

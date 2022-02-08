@@ -424,13 +424,13 @@ body {
 .timeslotHours {
   font-size: .5em;
   margin: 0px;
-  border-bottom: 2px dotted #001524;
+  border-top: 2px dotted #001524;
   height: 1.25em;
 }
 .timeslotMins {
   font-size: .25em;
   margin: 0px;
-  border-bottom: 1px dotted #001524;
+  border-top: 1px dotted #001524;
   /* margin-top: -1px; */
   height: 1.25em;
 }
@@ -438,20 +438,20 @@ body {
 #scheduleDayInfoForm {
   display: flex;
   flex-direction: column;
-  margin-left: 3em;
+  margin-right: -1em;
 }
 .scheduleDayInfoForms {
   font-size:.5em;
   height: 7em;
-  width: auto;
+  width: 50%;
   margin-top: -2em;
 }
-.scheduleDayInfoForms input {
-  width: 100%;
+#scheduleDayInfoFormInputDiv input {
+  width: 12em;
   font-size:.75em;
 }
-.scheduleDayInfoForms textarea {
-  width: 100%;
+#scheduleDayInfoFormInputDiv textarea {
+  width: 14.9em;
   min-height:7em;
   font-size:.75em;
 }
