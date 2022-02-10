@@ -6,69 +6,37 @@ app.controller('mainCtrl', ['$scope', '$http', '$window', '$compile', '$location
 
   var daysOfWeek = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 
-   $scope.schedule = [];
+  $()
 
-   $scope.selectedDayIndex = null;
-   $scope.selectedTimeIndex = null;
+  $scope.schedule = [];
 
-   $scope.formContinue = false;
+  $scope.selectedDayIndex = null;
+  $scope.selectedTimeIndex = null;
 
-   $scope.currentScheduleMonth = '';
-   $scope.selectedScheduleDay = null;
+  $scope.formContinue = false;
 
-   $scope.toMeet = {
-     email:'',
-     name:'',
-     summary:''
-   };
+  $scope.currentScheduleMonth = '';
+  $scope.selectedScheduleDay = null;
 
-  // function buildMeetingPlanner() {
-  //   var now = new Date()
-  //   var weekday = now.getDay();
-  //   var today = now.getDate();
-  //   var month = now.getMonth();
-  //   console.log(today);
-  //   for (var i = 0; i < 7; i++) {
-  //
-  //     var d = {
-  //       day: today + i,
-  //       weekday: weekday,
-  //       month: month,
-  //       timeslots:[]
-  //     }
-  //
-  //     if (weekday + i > 6) {
-  //       d.weekday = weekday + i - 7;
-  //     } else {
-  //       d.weekday = weekday + i;
-  //     }
-  //
-  //     if (today + i > monthDays[month]) {
-  //       d.day = today + i - monthDays[month];
-  //     }
-  //
-  //     d.displayDay = daysOfWeek[d.weekday];
-  //     d.displayMonth = monthNames[d.month];
-  //
-  //     for (var j = 0; j < 12; j++) {
-  //
-  //
-  //       for (var k = 0; k < 5; k++) {
-  //         slot = {
-  //           hour: j + 8,
-  //           min: 0 + (15*k)
-  //         }
-  //         d.timeslots.push(slot);
-  //       }
-  //
-  //     }
-  //
-  //     $scope.schedule.push(d)
-  //
-  //   }
-  //   console.log($scope.schedule);
-  //
-  // }
+  $scope.toMeet = {
+   email:'',
+   name:'',
+   summary:''
+  };
+
+  function getSchedule() {
+    $http.get('getSchedule')
+    .then(function(res) {
+      console.log(res);
+      if(res.data.length > 0) {
+        $scope.schedule = JSON.parse(res.data[res.data.length - 1].scheduleData);
+        buildMeetingPlanner();
+      }
+    })
+    .catch(function(err) {
+      console.log(err);
+    })
+  }
 
   function buildMeetingPlanner() {
     var now = new Date()
@@ -77,68 +45,68 @@ app.controller('mainCtrl', ['$scope', '$http', '$window', '$compile', '$location
     var month = now.getMonth();
     var countDays = monthDays[month];
     var adjusted = false;
-    for (var i = -1*(today); i < countDays; i++) {
-      if (i == -1*today && today > 6 && adjusted == false) {
-        console.log("hit")
-        // countDays -= 7*(((today*10)%7));
-        // countDays += today;
-      }
-      console.log(i);
-      var d = {
-        day: today + i -1,
-        displayDate:today + i -1,
-        weekday: weekday,
-        month: month,
-        timeslots:[]
-      }
 
-      if (i < today) {
-        // d.displayDate += today;
-      }
+    if ($scope.schedule.length == 0) {
 
-      if(i < 0) {
-        d.day = i;
-      }
+      for (var i = -1*(today); i < countDays; i++) {
 
-      if (weekday + i > 6) {
-        d.weekday = i % 7;
-      } else {
-        d.weekday = weekday + i;
-      }
-
-      if (today + i - 1 > monthDays[month]) {
-        d.day = today + i - monthDays[month] - 1;
-        d.displayMonth = monthNames[month + 1];
-      }
-
-      d.displayDay = daysOfWeek[d.weekday];
-      d.displayMonth = monthNames[d.month];
-
-      console.log(d);
-
-      for (var j = 0; j < 12; j++) {
-
-
-        for (var k = 0; k < 4; k++) {
-          slot = {
-            hour: j + 8,
-            min: 0 + (15*k),
-            slot: null
-          }
-          d.timeslots.push(slot);
+        var d = {
+          day: today + i -1,
+          displayDate:today + i -1,
+          weekday: weekday,
+          month: month,
+          timeslots:[]
         }
 
+        if(i < 0) {
+          d.day = i;
+        }
+
+        if (weekday + i > 6) {
+          d.weekday = i % 7;
+        } else {
+          d.weekday = weekday + i;
+        }
+
+        if (today + i - 1 > monthDays[month]) {
+          d.day = today + i - monthDays[month] - 1;
+          d.month += 1;
+          d.displayMonth = monthNames[month + 1];
+        }
+
+        d.displayDay = daysOfWeek[d.weekday];
+        d.displayMonth = monthNames[d.month];
+
+        for (var j = 0; j < 12; j++) {
+
+          for (var k = 0; k < 4; k++) {
+            slot = {
+              hour: j + 8,
+              min: 0 + (15*k),
+              slot: null
+            }
+            d.timeslots.push(slot);
+          }
+
+        }
+
+        $scope.schedule.push(d)
+
       }
-
-      $scope.schedule.push(d)
-
+    } else {
+      for (var i = 0; i < $scope.schedule.length; i++) {
+        console.log(month, $scope.schedule[i].month);
+        if (month == $scope.schedule[i].month && today > $scope.schedule[i].day) {
+          $scope.schedule[i].day = 0;
+          console.log($scope.schedule[i].day);
+        }
+      }
     }
+
+    console.log($scope.schedule);
   }
 
-  buildMeetingPlanner();
-
   function selectScheduleDay(s, index) {
-    console.log(s, index);
     $('.scheduleDayCells').css('display', 'none');
 
     $('#websitesScheduleDisplay').css('flex-direction', 'column');
@@ -147,12 +115,11 @@ app.controller('mainCtrl', ['$scope', '$http', '$window', '$compile', '$location
     $('#scheduleDayCell' + index + ' .scheduleDayManagerDateDisplays').css('justify-content','space-between');
     $('#scheduleDayCell' + index + ' .scheduleDayManagerDateDisplays').css('margin-top','1em');
 
-
     $('#scheduleDayCell'+index).css('display','flex');
     $('#scheduleDayCell'+index).css('font-size','2em');
     $('#scheduleDayCell'+index).css('margin','0px')
     $('#scheduleDayCell'+index).css('width','50%')
-    // $('#scheduleDayCell'+index).css('height','2em')
+
     $('#scheduleDayCell'+index).css('justify-content','space-between');
 
     $('#scheduleHeader').css('width','50%');
@@ -166,12 +133,25 @@ app.controller('mainCtrl', ['$scope', '$http', '$window', '$compile', '$location
 
     $scope.selectedScheduleDay = s;
     $scope.selectedDayIndex = index;
-    console.log($scope.selectedScheduleDay);
+
+    for (var i = 0; i < $scope.selectedScheduleDay.timeslots.length; i++) {
+      if ($scope.selectedScheduleDay.timeslots[i + 3] && $scope.selectedScheduleDay.timeslots[i + 3].slot != null) {
+        $('#scheduleDayManagerDisplay' + index + ' #scheduleDayManagerTimeslot' + i).css('pointer-events','none');
+        $('#scheduleDayManagerDisplay' + index + ' #scheduleDayManagerTimeslot' + i).css('cursor','default');
+        $('#scheduleDayManagerDisplay' + index + ' #scheduleDayManagerTimeslot' + i).css('color','rgba(0, 21, 36,0.5)');
+      }
+      if ($scope.selectedScheduleDay.timeslots[i].slot != null) {
+        $('#scheduleDayManagerDisplay' + index + ' #scheduleDayManagerTimeslot' + i).css('background','#EF5B5B');
+        $('#scheduleDayManagerDisplay' + index + ' #scheduleDayManagerTimeslot' + i).css('pointer-events','none');
+        $('#scheduleDayManagerDisplay' + index + ' #scheduleDayManagerTimeslot' + i).css('cursor','default');
+        $('#scheduleDayManagerDisplay' + index + ' #scheduleDayManagerTimeslot' + i).css('color','rgba(0, 21, 36,0.5)');
+      }
+    }
   }
 
   function deselectScheduleDay(s, index) {
     $scope.selectedScheduleDay = null;
-
+    $scope.formContinue = false;
     $('.scheduleDayCells').css('display', 'flex');
 
     $('#websitesScheduleDisplay').css('flex-direction', 'row');
@@ -188,45 +168,49 @@ app.controller('mainCtrl', ['$scope', '$http', '$window', '$compile', '$location
 
     $('.weekDays').css('display','flex');
     $('#weekDay'+s.weekday).css('width', '2.1277em');
-    // $('#weekDay'+s.weekday).css('justify-content', 'center');
-    // $('#weekDay'+s.weekday).css('text-align', 'center');
-
 
     $('#scheduleDayManagerDisplay'+index).css('display','none');
+    $('.exitScheduleFormAncs').css('display','none');
+    $('.continueToScheduleFormAncs').css('display','none');
+
 
   }
 
   function selectScheduleDayTimeslot(slot, index) {
-    console.log(slot, index);
     $('.scheduleDayManagerTimeslots p').css('background','none')
     $('#scheduleDayCell' + $scope.selectedDayIndex + ' .continueToScheduleFormAncs').css('display','flex');
+    $('.exitScheduleFormAncs').css('display','flex');
     $scope.selectedTimeIndex = index;
     for (var i = 0; i < 4; i++) {
-      $('#scheduleDayManagerTimeslot' + (index + i) + ' p').css('background','lightgreen');
+      $('#scheduleDayManagerTimeslot' + (index + i) + ' p').css('background','#7FB069');
     }
 
   }
 
   function continueToScheduleInfoForm() {
-    console.log($scope.selectedScheduleDay);
+
     $('#scheduleDayManagerDisplay'+$scope.selectedDayIndex).css('display','none');
-    // $('#scheduleDayInfoForms'+$scope.selectedDayIndex).css('display','flex');
+    $('.scheduleDayManagerTimeslots p').css('display','flex')
+
     $scope.formContinue = true;
   }
+
   function exitScheduleInfoForm() {
-    console.log($scope.selectedScheduleDay);
+
     $('#scheduleDayManagerDisplay'+$scope.selectedDayIndex ).css('display','flex');
-    // $('#scheduleDayInfoForms'+$scope.selectedDayIndex).css('display','none');
+
+    $('#scheduleDayCell' + $scope.selectedDayIndex + ' .continueToScheduleFormAncs').css('display','none');
+    // $('.scheduleDayManagerTimeslots p').css('display','none')
+
 
     $scope.formContinue = false;
   }
 
   function addToSchedule() {
-    // console.log($scope.toMeet);
     for (var i = 0; i < 4; i++) {
+
       $scope.schedule[$scope.selectedDayIndex].timeslots[$scope.selectedTimeIndex + i].slot = $scope.toMeet;
-      console.log($scope.schedule[$scope.selectedScheduleDay.day-1].timeslots[$scope.selectedTimeIndex + i]);
-      console.log($scope.selectedDayIndex);
+
     }
     $http.post('addToSchedule',{schedule:JSON.stringify($scope.schedule)})
     .then(function(res) {
@@ -238,28 +222,52 @@ app.controller('mainCtrl', ['$scope', '$http', '$window', '$compile', '$location
   }
 
   $scope.selectScheduleDay = function(s, index) {
-    console.log('hello');
+
     if ($scope.selectedScheduleDay != null) {
       deselectScheduleDay(s, index);
     } else {
       selectScheduleDay(s, index);
     }
+
   }
 
   $scope.selectScheduleDayTimeslot = function(slot, index) {
     selectScheduleDayTimeslot(slot, index);
   }
 
+  $('.scheduleDayManagerTimeslots').hover(
+    function() {
+      console.log('hit');
+      var id = $('this').attr('id');
+      var index = id.charAt(id.length-1);
+      for (var i = 0; i < 4; i++) {
+        $('#scheduleDayManagerDisplay' + $scope.selectedDayIndex + ' #scheduleDayManagerTimeslot' + (index + i)).css('background','#7FB069');
+      }
+    }, function() {
+      console.log('hit 2');
+      var id = $('this').attr('id');
+      var index = id.charAt(id.length-1);
+      for (var i = 0; i < 4; i++) {
+        $('#scheduleDayManagerDisplay' + $scope.selectedDayIndex + ' #scheduleDayManagerTimeslot' + (index + i)).css('background','none');
+      }
+    }
+  );
+
   $scope.continueToScheduleInfoForm = function() {
-    console.log('hit');
     continueToScheduleInfoForm();
   }
   $scope.exitScheduleInfoForm = function() {
-    console.log('hit');
     exitScheduleInfoForm();
   }
   $scope.addToSchedule = function() {
     addToSchedule();
   }
 
+  function start() {
+    getSchedule();
+    $('#welcomeHomeDiv').animate({
+      background: "#001524"
+    },1500);
+  }
+  start();
 }]);

@@ -12,6 +12,7 @@ app.use(express.static('public'));
 app.use(bodyParser.json({limit:1024*1024*20, type:'application/json'}));
 
 app.post('/addToSchedule', server.schedule.addToSchedule);
+app.get('/getSchedule', server.schedule.getSchedule);
 
 app.set('port', process.env.PORT || 3000);
 app.listen(app.get('port'), function() {

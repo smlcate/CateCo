@@ -33,3 +33,15 @@ exports.addToSchedule = function (req, res, next) {
     }
   })
 }
+
+exports.getSchedule = function(req, res, send) {
+  knex('schedule')
+  .select('*')
+  .then(function(data) {
+    res.send(data)
+  })
+  .catch(function(err) {
+    console.log(err);
+    res.send(err);
+  })
+}
