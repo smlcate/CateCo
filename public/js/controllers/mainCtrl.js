@@ -29,6 +29,8 @@ app.controller('mainCtrl', ['$scope', '$http', '$window', '$compile', '$location
       if(res.data.length > 0) {
         $scope.schedule = JSON.parse(res.data[res.data.length - 1].scheduleData);
         buildMeetingPlanner();
+      } else {
+        buildMeetingPlanner();
       }
     })
     .catch(function(err) {
