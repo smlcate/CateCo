@@ -6,8 +6,6 @@ app.controller('mainCtrl', ['$scope', '$http', '$window', '$compile', '$location
 
   var daysOfWeek = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 
-  $()
-
   $scope.schedule = [];
 
   $scope.selectedDayIndex = null;
@@ -200,8 +198,6 @@ app.controller('mainCtrl', ['$scope', '$http', '$window', '$compile', '$location
     $('#scheduleDayManagerDisplay'+$scope.selectedDayIndex ).css('display','flex');
 
     $('#scheduleDayCell' + $scope.selectedDayIndex + ' .continueToScheduleFormAncs').css('display','none');
-    // $('.scheduleDayManagerTimeslots p').css('display','none')
-
 
     $scope.formContinue = false;
   }
