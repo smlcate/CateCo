@@ -32,6 +32,7 @@ header a {
 header svg {
   margin: 0px;
   filter: drop-shadow(0px 2px 2px #222);
+  z-index: 990;
 }
 #header-shape-gradient {
   --color-stop: #62a4ed;
