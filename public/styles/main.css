@@ -516,7 +516,7 @@ header svg {
   position: sticky;
   top: 0;
   bottom: 1000;
-  text-shadow: 0px 2px 2px #222;
+  filter: drop-shadow(0px 2px 2px #222);
   width: 100%;
 }
 .websitesHourlyStaticCellHeaders {
