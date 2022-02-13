@@ -51,19 +51,21 @@ app.controller('mainCtrl', ['$scope', '$http', '$window', '$compile', '$location
       for (var i = -1*(today); i < countDays; i++) {
 
         var d = {
-          day: today + i -1,
-          displayDate:today + i -1,
+          day: today + i - 1,
+          displayDate:today + i - 1,
           weekday: weekday,
           month: month,
           timeslots:[]
         }
 
-        if(i < 0) {
+        if(i <= 0) {
           d.day = i;
         }
 
         if (weekday + i > 6) {
           d.weekday = i % 7;
+        } else if(weekday + i > 12) {
+          d.weekday = (i-4) % 7;
         } else {
           d.weekday = weekday + i;
         }
