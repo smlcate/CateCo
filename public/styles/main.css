@@ -8,7 +8,7 @@
 body {
   margin: 0px;
   font-family: 'LouisGeorgeCafe';
-  background: #FCFAF9;
+  background: #001524;
 }
 
 header {
@@ -728,8 +728,10 @@ header svg {
   list-style: none;
   text-indent:-1em;
 }
-.websitesHourlyCells ul {
-
+.websitesHourlyCells ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.25em;
 }
 .websitesHourlyCells ul li:before {
   content:'- ';
@@ -846,6 +848,7 @@ header svg {
   border-radius:10px;
   padding: .5em;
   font-size: 1.25em;
+  margin-top: 1em;
 }
 #scheduleHeader {
   width: 100%;
