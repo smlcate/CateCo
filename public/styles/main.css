@@ -833,7 +833,7 @@ header svg {
   flex-wrap: wrap;
   color: #001524;
   width: 15em;
-  height: 14.5em;
+  /* height: 14.5em; */
   background: #FCFAF9;
   border-radius:10px;
   padding: .5em;
@@ -1144,7 +1144,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     flex-wrap: wrap;
     color: #001524;
     width: 15em;
-    height: 14.5em;
+    /* height: 14.5em; */
     background: #FCFAF9;
     border-radius:10px;
     padding: .5em;
