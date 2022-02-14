@@ -6,6 +6,55 @@ app.controller('mainCtrl', ['$scope', '$http', '$window', '$compile', '$location
 
   var daysOfWeek = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 
+
+  $scope.packages = {
+    select:'',
+    features: [
+      {
+        full:'12,500',
+        red:'12,500',
+        inc:'Included',
+        price:'12,500'
+      },
+      {
+        full:'18,000',
+        red:'10,000',
+        inc:'Included',
+        price:'18,000'
+      },
+      {
+        full:'7,500',
+        red:'4,750',
+        inc:'Included',
+        price:'7,500'
+      },
+      {
+        full:'11,000',
+        red:'8,750',
+        inc:'Included',
+        price:'11,000'
+      },
+      {
+        full:'25,000',
+        red:'17,000',
+        inc:'Included',
+        price:'25,000'
+      },
+      {
+        full:'3,500',
+        red:'2,000',
+        inc:'Included',
+        price:'3,500'
+      },
+      {
+        full:'8,500',
+        red:'7,000',
+        inc:'Included',
+        price:'8,500'
+      },
+    ]
+  }
+
   $scope.schedule = [];
 
   $scope.selectedDayIndex = null;
@@ -21,6 +70,32 @@ app.controller('mainCtrl', ['$scope', '$http', '$window', '$compile', '$location
    name:'',
    summary:''
   };
+
+  function showNewPrices(p) {
+    if(p == 0) {
+
+    } else if(p == 1) {
+      $scope.packages.features[5].price = $scope.packages.features[5].red;
+      $scope.packages.features[6].price = $scope.packages.features[6].red;
+    } else if(p == 2) {
+      $scope.packages.features[0].price = $scope.packages.features[0].inc;
+      $scope.packages.features[1].price = $scope.packages.features[1].red;
+      $scope.packages.features[4].price = $scope.packages.features[4].red;
+
+    }
+  }
+  function showRegPrices(p) {
+    if(p == 0) {
+
+    } else if(p == 1) {
+      $scope.packages.features[5].price = $scope.packages.features[5].full;
+      $scope.packages.features[6].price = $scope.packages.features[6].full;
+    } else if(p == 2) {
+      $scope.packages.features[0].price = $scope.packages.features[0].full;
+      $scope.packages.features[1].price = $scope.packages.features[1].full;
+      $scope.packages.features[4].price = $scope.packages.features[4].full;
+    }
+  }
 
   function getSchedule() {
     $http.get('getSchedule')
@@ -219,6 +294,13 @@ app.controller('mainCtrl', ['$scope', '$http', '$window', '$compile', '$location
     .catch(function(err) {
       console.log(err);
     })
+  }
+
+  $scope.showNewPrices = function(p) {
+    showNewPrices(p);
+  }
+  $scope.showRegPrices = function(p) {
+    showRegPrices(p);
   }
 
   $scope.selectScheduleDay = function(s, index) {

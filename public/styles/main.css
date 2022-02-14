@@ -65,7 +65,7 @@ header svg {
 
 .homeDivs {
   min-height: 100vh;
-  box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.8);
+  /* box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.8); */
 }
 
 @keyframes bodyDarken {
@@ -368,6 +368,46 @@ header svg {
 .homeNavSplitters a {
 
 }
+#welcomeNavSplitter {
+  top: 0;
+}
+#welcomeNavFootSplitter {
+  width: 100vw;
+  margin-left: 0px;
+  height: 1.5em !important;
+  bottom: 0 !important;
+  top: 0;
+  margin-top: 0 !important;
+  justify-content: flex-start;
+  background: none;
+  /* margin-top: 100vh - .75em !important; */
+  z-index: 0;
+}
+#welcomeNavFootSplitter svg {
+  filter: drop-shadow(0px 2px 2px #222);
+  fill: url(#header-shape-gradient) #fff;
+  height: 1.5em;
+  width: 1.5em;
+}
+#welcomeNavSchedSplitter {
+  background: none;
+  width: 100vw;
+  margin-left: 0px;
+  height: 1.5em !important;
+  bottom: 0 !important;
+  /* top: 1.5em; */
+  margin-top: 0 !important;
+  justify-content: flex-start;
+  /* margin-top: 100vh - .75em !important; */
+  z-index: 1;
+}
+#welcomeNavSchedSplitter svg {
+  filter: drop-shadow(0px 2px 2px #222);
+  fill: url(#header-shape-gradient) #fff;
+  margin-left: 1.5em;
+  height: 1.5em;
+  width: 1.5em;
+}
 
 @-webkit-keyframes splitterBackgroundAnimation {
     0%{background-position:0% 28%}
@@ -404,6 +444,27 @@ header svg {
   box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.8);
 
 }
+#websitesPitchContainer {
+  width: 80vw;
+
+}
+#websitesPitchContainer span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content:center;
+  font-size:1em;
+}
+#websitesPitchContainer span svg {
+  height: 4em;
+  width: 4em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin: 0px;
+  filter: drop-shadow(0px 2px 2px #222);
+
+}
 #websitesPitchContainer h2 {
   /* width: 100vw; */
   /* height: 20vh; */
@@ -434,12 +495,7 @@ header svg {
   width: 70vw;
 }
 #websitesHomeDivInfoContainer span {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  justify-content:center;
-  font-size:1em;
+
 }
 #websitesHomeDivInfoContainer span  p {
   width: 80%;
@@ -501,6 +557,32 @@ header svg {
 .markdownTexts {
   color: #7FB069;
 }
+#websitesPackagesHeader {
+  display: flex;
+  margin-bottom:-1.5em;
+}
+#websitesPackagesHeader h3 {
+  margin: 0px;
+}
+.websitesPackagesHeaderTitles {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  z-index: 960;
+  filter:drop-shadow(0px 2px 2px #222);
+  /* justify-content:center; */
+}
+.websitesPackagesHeaderTitles p {
+  margin-top: 0px;
+  font-size: .5em;
+}
+#websitesPackagesBundleHeaderTitle {
+  width: 75%;
+  /* margin-bottom: -2em; */
+}
+#websitesPackagesFeatureHeaderTitle {
+  width: 25%;
+}
 .websitesHourlyCells {
   display: flex;
   flex-direction: column;
@@ -511,6 +593,10 @@ header svg {
 #websitesPackagesDisplay .websitesHourlyCells {
   min-width: 9em;
   margin: .5em !important;
+}
+#websitesPackagesDisplay .websitesHourlyCells:not(#websitesFeatureHourlyCell):hover {
+  /* background: #FCFAF9; */
+  color: #347FC4;
 }
 .websitesHourlyCellHeaders {
   display: flex;
@@ -527,7 +613,8 @@ header svg {
   display: flex;
   flex-direction: column;
   z-index: 996;
-  text-shadow: 0px 2px 2px #222;
+  /* text-shadow: 0px 2px 2px #222; */
+  filter: drop-shadow(0px 2px 2px #222);
   width: 100%;
   position: -webkit-sticky; /* Safari & IE */
   position: sticky;
@@ -570,6 +657,15 @@ header svg {
   /* margin-bottom: .25em; */
   min-height: 2.5em;
   text-decoration: none;
+  color: #FCFAF9;
+}
+.featureListCellHeaderRedPrices {
+  display: none;
+}
+.featureListCellHeaderIncPrices {
+  display: none;
+}
+.featureListCellHeader h3:nth-child(1) {
   color: #347FC4;
 }
 @keyframes featureListExpand {
@@ -672,6 +768,12 @@ header svg {
   border-color: #7A5980;
   color: #EF5B5B;
 }
+#websiteHourlyCellDividerD {
+  border-color: #7A5980;
+  color: #EF5B5B;
+  margin: .5em;
+  margin-top: 1em;
+}
 .websiteHourlyCellSplitters {
   border-width: 1px;
   border-style: solid;
@@ -709,8 +811,22 @@ header svg {
 #websitesHomeDivNavContainer a {
   text-decoration: none;
 }
+
+#websitesScheduleDivNavContainer {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  width: 80vw;
+}
 #websitesScheduleInformationDisplay {
   width: 50%;
+}
+#websitesScheduleHeaderTitle {
+  width: 100%;
+}
+#websitesScheduleHeaderTitle h3 {
+  margin-bottom: 0px;
 }
 #websitesScheduleDisplay {
   display: flex;
@@ -721,6 +837,7 @@ header svg {
   background: #FCFAF9;
   border-radius:10px;
   padding: .5em;
+  font-size: 1.25em;
 }
 #scheduleHeader {
   width: 100%;
@@ -1007,6 +1124,32 @@ and (-webkit-min-device-pixel-ratio: 2) {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+  }
+  .websitesPackagesHeaderTitles {
+    font-size: 2em;
+  }
+  #websitesPackagesBundleHeaderTitle {
+    /* display: none; */
+    width: 100%;
+  }
+  #websitesPackagesFeatureHeaderTitle {
+    display: none;
+  }
+  #websitesScheduleHeaderTitle {
+    /* display: none; */
+    font-size: 1.25em;
+  }
+  #websitesScheduleDisplay {
+    display: flex;
+    flex-wrap: wrap;
+    color: #001524;
+    width: 15em;
+    height: 14.5em;
+    background: #FCFAF9;
+    border-radius:10px;
+    padding: .5em;
+    font-size: 1.75em;
+
   }
 }
 
