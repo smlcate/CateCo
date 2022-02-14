@@ -578,6 +578,8 @@ header svg {
 }
 #websitesPackagesBundleHeaderTitle {
   width: 75%;
+  /* border-width: 1px;
+  border-image: linear-gradient(to right, #7A5980, #347FC4, #EF5B5B, #7A5980) 1 !important; */
   /* margin-bottom: -2em; */
 }
 #websitesPackagesFeatureHeaderTitle {
@@ -789,6 +791,12 @@ header svg {
 }
 #websiteHourlyCellSplitterD {
   border-image: linear-gradient(to right, #7A5980, #347FC4) 1;
+}
+#websiteHourlyCellSplitterE {
+  border-image: linear-gradient(to right, #7A5980, #347FC4, #EF5B5B, #7A5980) 1;
+}
+#websiteHourlyCellSplitterF {
+  border-image: linear-gradient(to right, #7A5980, #347FC4, #EF5B5B, #7A5980, #347FC4) 1;
 }
 
 .websitesHourlyCells p {
