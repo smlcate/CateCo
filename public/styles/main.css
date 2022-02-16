@@ -376,7 +376,7 @@ header svg {
   margin-left: 0px;
   height: 1.5em !important;
   bottom: 0 !important;
-  top: 0;
+  top: .125em;
   margin-top: 0 !important;
   justify-content: flex-start;
   background: none;
@@ -728,6 +728,9 @@ header svg {
   list-style: none;
   text-indent:-1em;
 }
+#websitesOnlineMarketingCell p {
+  margin-top: .5em;
+}
 .websitesHourlyCells ul li a {
   text-decoration: none;
   font-weight: bold;
@@ -778,6 +781,12 @@ header svg {
   margin: .5em;
   margin-top: 1em;
 }
+#websiteHourlyCellDividerG {
+  border-color: #347FC4;
+  color: #7A5980;
+  margin: .5em;
+  margin-top: 1em;
+}
 .websiteHourlyCellSplitters {
   border-width: 1px;
   border-style: solid;
@@ -799,6 +808,9 @@ header svg {
 }
 #websiteHourlyCellSplitterF {
   border-image: linear-gradient(to right, #7A5980, #347FC4, #EF5B5B, #7A5980, #347FC4) 1;
+}
+#websiteHourlyCellSplitterG {
+  border-image: linear-gradient(to right, #347FC4, #EF5B5B, #7A5980, #347FC4) 1;
 }
 
 .websitesHourlyCells p {
@@ -848,7 +860,7 @@ header svg {
   border-radius:10px;
   padding: .5em;
   font-size: 1.25em;
-  margin-top: 1em;
+  margin-top: 1em
 }
 #scheduleHeader {
   width: 100%;
@@ -877,6 +889,9 @@ header svg {
   align-items: center;
   justify-content: center;
   filter: drop-shadow(0px 1px 1px #222);
+}
+.featureListCellHeader {
+  width: 100%;
 }
 .scheduleDayCellDateDisplay:hover .scheduleDayCellTexts {
   font-size: 1.5em;

@@ -17,10 +17,10 @@ app.controller('mainCtrl', ['$scope', '$http', '$window', '$compile', '$location
         price:'12,500'
       },
       {
-        full:'18,000',
-        red:'10,000',
+        full:'23,000',
+        red:'10,500',
         inc:'Included',
-        price:'18,000'
+        price:'23,000'
       },
       {
         full:'7,500',
@@ -35,10 +35,10 @@ app.controller('mainCtrl', ['$scope', '$http', '$window', '$compile', '$location
         price:'11,000'
       },
       {
-        full:'25,000',
-        red:'17,000',
+        full:'30,000',
+        red:'22,000',
         inc:'Included',
-        price:'25,000'
+        price:'30,000'
       },
       {
         full:'3,500',
@@ -187,6 +187,7 @@ app.controller('mainCtrl', ['$scope', '$http', '$window', '$compile', '$location
     $('.scheduleDayCells').css('display', 'none');
 
     $('#websitesScheduleDisplay').css('flex-direction', 'column');
+    $('#websitesScheduleDisplay').css('height', '14.25em');
 
     $('#scheduleDayCell' + index + ' .scheduleDayManagerDateDisplays').css('height','3em');
     $('#scheduleDayCell' + index + ' .scheduleDayManagerDateDisplays').css('justify-content','space-between');
