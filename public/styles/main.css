@@ -1086,15 +1086,21 @@ header svg {
 and (min-device-width: 320px)
 and (max-device-width: 600px)
 and (-webkit-min-device-pixel-ratio: 2) {
+  #linkDiv {
+    flex-direction: column;
+    /* margin-top: 1em; */
+    top: 0;
+  }
   .githubIconAncs {
     height: 6em;
     width: 6em;
-    margin-top: 3em;
+    /* top: -1; */
+    margin-top: -4em;
   }
   .linkedinIconAncs {
     height: 6em;
     width: 6em;
-    margin-top: 3em;
+    /* margin-top: 3em; */
   }
   .homePageNavAncs {
     height: 2.5em !important;
@@ -1237,6 +1243,25 @@ and (-webkit-min-device-pixel-ratio: 2) {
     text-indent:-.9em;
     /* margin-left: 0px; */
     /* padding-right: .5em; */
+  }
+  #welcomeNavSchedSplitter {
+    background: none;
+    width: 100vw;
+    /* margin-left: 0px; */
+    height: 1.5em !important;
+    /* bottom: 2 !important; */
+    top: 2.5em;
+    margin-top: 2em !important;
+    justify-content: flex-start;
+    /* margin-top: 100vh - .75em !important; */
+    z-index: 1;
+  }
+  #welcomeNavSchedSplitter svg {
+    filter: drop-shadow(0px 2px 2px #222);
+    fill: url(#header-shape-gradient) #fff;
+    margin-left: 0em !important;
+    height: 1.5em;
+    width: 1.5em;
   }
   #websitesScheduleDisplay {
     display: flex;
