@@ -368,6 +368,18 @@ header svg {
 .homeNavSplitters a {
 
 }
+#priceExplanationDisplay {
+  width: 80vw;
+}
+#priceExplanationDisplay h2 {
+  text-align: center;
+  position: -webkit-sticky; /* Safari & IE */
+  position: sticky;
+  top: .25em;
+}
+#priceExplanationDisplay h3 {
+  justify-content:center;
+}
 #welcomeNavSplitter {
   top: 0;
 }
@@ -490,9 +502,10 @@ header svg {
 .websitesHomeDivContainers {
   padding: 30px;
   margin-top: 0px;
+  width: 80vw;
 }
 #websitesHomeDivInfoContainer {
-  width: 70vw;
+  /* width: 90vw; */
 }
 #websitesHomeDivInfoContainer span {
 
@@ -591,9 +604,10 @@ header svg {
   justify-content:flex-end;
   align-items: center;
   margin: .25em;
+
 }
 #websitesPackagesDisplay .websitesHourlyCells {
-  min-width: 9em;
+  /* min-width: 9em; */
   margin: .5em !important;
 }
 #websitesPackagesDisplay .websitesHourlyCells:not(#websitesFeatureHourlyCell):hover {
@@ -645,13 +659,14 @@ header svg {
 .featureListCells {
   max-height: 0em;
   margin-top: 0px;
-  overflow: hidden;
+  overflow-y: hidden;
   transition: max-height 0.15s ease-out;
   /* display:none; */
 
 }
 .featureListCells:hover{
   display:inline;
+  border
 }
 .featureListCellHeader {
   /* margin-bottom: 1em; */
@@ -766,6 +781,13 @@ header svg {
   color: #7A5980;
 }
 .websiteHourlyCellDividers p {
+}
+#websitesMaintenanceDisplay .websitesHourlyCells ul {
+  list-style-type: none;
+  text-indent: -.9em;
+}
+.websitesHourlyCells h3, h5 {
+  white-space: nowrap;
 }
 #websiteHourlyCellDividerB {
   border-color: #EF5B5B;
@@ -1063,6 +1085,28 @@ header svg {
 and (min-device-width: 320px)
 and (max-device-width: 600px)
 and (-webkit-min-device-pixel-ratio: 2) {
+  .githubIconAncs {
+    height: 6em;
+    width: 6em;
+    margin-top: 3em;
+  }
+  .linkedinIconAncs {
+    height: 6em;
+    width: 6em;
+    margin-top: 3em;
+  }
+  .homePageNavAncs {
+    height: 2.5em !important;
+    width: 2.5em !important;
+    margin-top: 1em;
+  }
+  #welcomeNavSchedSplitter .homePageNavAncs {
+    margin-left: 2.5em;
+  }
+  /* .linkedinIconAncs {
+    height: 6em;
+    width: 6em;
+  } */
   #welcomeHomeDiv {
 
   }
@@ -1097,9 +1141,10 @@ and (-webkit-min-device-pixel-ratio: 2) {
   }
   .websitesHourlyDisplays {
     flex-wrap: wrap;
+    /* width: 100vw; */
   }
   .websitesHourlyCells {
-    width: 80vw;
+    /* width: 80vw; */
     /* margin-left: 2.5em !important; */
   }
   .websitesHourlyCells ul {
@@ -1136,6 +1181,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
   .websiteHourlyCellDividers {
     margin-top: 3.25em !important;
     margin-right: -1em;
+    display: none;
   }
   #websitesByHourlyDisplay .websitesHourlyCells {
     font-size: 1em !important;
@@ -1164,6 +1210,18 @@ and (-webkit-min-device-pixel-ratio: 2) {
   #websitesScheduleHeaderTitle {
     /* display: none; */
     font-size: 1.25em;
+  }
+   #websitesPackagesDisplay .websitesHourlyCells ul {
+    /* width: 60vw; */
+    margin-left: 0em !important;
+  }
+  #websitesPackagesDisplay ul {
+    font-size: .7em;
+    width: 100%;
+    list-style: none;
+    text-indent:-.9em;
+    /* margin-left: 0px; */
+    /* padding-right: .5em; */
   }
   #websitesScheduleDisplay {
     display: flex;
