@@ -370,6 +370,7 @@ header svg {
 }
 #priceExplanationDisplay {
   width: 80vw;
+  color: #FCFAF9;
 }
 #priceExplanationDisplay h2 {
   text-align: center;
