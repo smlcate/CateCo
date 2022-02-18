@@ -64,7 +64,7 @@ header svg {
 }
 
 .homeDivs {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   /* box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.8); */
 }
 
@@ -377,12 +377,14 @@ header svg {
   position: -webkit-sticky; /* Safari & IE */
   position: sticky;
   top: .25em;
+  z-index: 50;
 }
 #priceExplanationDisplay h3 {
   justify-content:center;
 }
 #welcomeNavSplitter {
   top: 0;
+  z-index:2;
 }
 #welcomeNavFootSplitter {
   width: 100vw;
@@ -394,7 +396,7 @@ header svg {
   justify-content: flex-start;
   background: none;
   /* margin-top: 100vh - .75em !important; */
-  z-index: 0;
+  z-index: 3;
 }
 #welcomeNavFootSplitter svg {
   filter: drop-shadow(0px 2px 2px #222);
@@ -412,7 +414,7 @@ header svg {
   margin-top: 0 !important;
   justify-content: flex-start;
   /* margin-top: 100vh - .75em !important; */
-  z-index: 1;
+  z-index: 3;
 }
 #welcomeNavSchedSplitter svg {
   filter: drop-shadow(0px 2px 2px #222);
@@ -577,6 +579,17 @@ header svg {
 }
 #websitesPackagesHeader h3 {
   margin: 0px;
+}
+.websitesOptionCellHeaders {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0em;
+  z-index:1500 !important;
+  width: 100%;
+  justify-content:center;
+}
+.websitesOptionCellHeaders h3, h5{
+  height: .75em !important;
 }
 .websitesPackagesHeaderTitles {
   display: flex;
@@ -870,6 +883,11 @@ header svg {
 }
 #websitesScheduleHeaderTitle {
   width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1.25em;
+  color: #FCFAF9;
+
 }
 #websitesScheduleHeaderTitle h3 {
   margin-bottom: 0px;
@@ -913,6 +931,7 @@ header svg {
   align-items: center;
   justify-content: center;
   filter: drop-shadow(0px 1px 1px #222);
+  z-index:0 !important;
 }
 .featureListCellHeader {
   width: 100%;
@@ -1072,8 +1091,22 @@ header svg {
   background: #7A5980;
 }
 #workHomeDiv {
-  background: #347FC4;
-  height:90vh
+  min-height:90vh;
+  color: #FCFAF9;
+}
+#websitesWorkHeaderTitle {
+  position: -webkit-sticky; /* Safari & IE */
+  position: sticky;
+  top: 0em;
+  z-index: 970;
+}
+#websitesWorkHeaderTitle h3 {
+  margin: 0px;
+  /* margin-bottom: -.15em; */
+}
+#workHomeDiv img {
+  max-width: 50em;
+  min-width: 5em;
 }
 #workNavSplitter {
   background: #347FC4;
@@ -1221,6 +1254,10 @@ and (-webkit-min-device-pixel-ratio: 2) {
   }
   .websitesPackagesHeaderTitles {
     font-size: 2em;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 1em;
+    z-index: 950;
   }
   #websitesPackagesBundleHeaderTitle {
     /* display: none; */
@@ -1263,6 +1300,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     margin-left: 0em !important;
     height: 1.5em;
     width: 1.5em;
+    z-index: 900 !important;
   }
   #websitesScheduleDisplay {
     display: flex;
@@ -1275,6 +1313,27 @@ and (-webkit-min-device-pixel-ratio: 2) {
     padding: .5em;
     font-size: 1.75em;
 
+  }
+  #workHomeDiv {
+    /* min-height:90vh;
+    color: #FCFAF9; */
+  }
+  #websitesWorkHeaderTitle {
+    /* position: -webkit-sticky; /* Safari & IE */
+    /* position: sticky;
+    top: 0em;
+    z-index: 970; */
+  }
+  #websitesWorkHeaderTitle h3 {
+    /* margin: 0px; */
+    /* margin-bottom: -.15em; */
+  }
+  #workHomeDiv img {
+    max-width: 95vw;
+    min-width: 5em;
+  }
+  #workNavSplitter {
+    background: #347FC4;
   }
 }
 
