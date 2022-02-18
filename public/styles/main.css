@@ -667,7 +667,6 @@ header svg {
 }
 .featureListCells:hover{
   display:inline;
-  border
 }
 .featureListCellHeader {
   /* margin-bottom: 1em; */
@@ -705,10 +704,12 @@ header svg {
 }
 .featureListCellHeader h3, h5 {
   /* margin: .5em !important; */
-  margin-bottom: 0px !important;
+  margin-bottom: .25em !important;
+  height: 1em !important;
 }
 .featureListCellHeader h5 {
-  margin-bottom: 0px !important;
+  margin-bottom: .25em !important;
+  margin-top: .25em !important;
 }
 .featureListCells li {
   /* font-size: 1em !important;
