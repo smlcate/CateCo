@@ -1096,6 +1096,7 @@ header svg {
 #workHomeDiv {
   min-height:90vh;
   color: #FCFAF9;
+  align-items: center;
 }
 #websitesWorkHeaderTitle {
   position: -webkit-sticky; /* Safari & IE */
@@ -1104,6 +1105,10 @@ header svg {
   z-index: 970;
 }
 #websitesWorkHeaderTitle h3 {
+  margin: 0px;
+  /* margin-bottom: -.15em; */
+}
+#websitesWorkHeaderTitle h6 {
   margin: 0px;
   /* margin-bottom: -.15em; */
 }
