@@ -187,7 +187,7 @@ app.controller('mainCtrl', ['$scope', '$http', '$window', '$compile', '$location
     $('.scheduleDayCells').css('display', 'none');
 
     $('#websitesScheduleDisplay').css('flex-direction', 'column');
-    $('#websitesScheduleDisplay').css('height', '14.25em');
+    $('#websitesScheduleDisplay').css('height', '14em');
 
     $('#scheduleDayCell' + index + ' .scheduleDayManagerDateDisplays').css('height','3em');
     $('#scheduleDayCell' + index + ' .scheduleDayManagerDateDisplays').css('justify-content','space-between');
@@ -233,6 +233,7 @@ app.controller('mainCtrl', ['$scope', '$http', '$window', '$compile', '$location
     $('.scheduleDayCells').css('display', 'flex');
 
     $('#websitesScheduleDisplay').css('flex-direction', 'row');
+    $('#websitesScheduleDisplay').css('height', 'auto');
 
     $('#scheduleDayCell' + index + ' .scheduleDayManagerDateDisplays').css('height','auto');
     $('#scheduleDayCell' + index + ' .scheduleDayManagerDateDisplays').css('justify-content','space-between');
