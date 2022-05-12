@@ -19,6 +19,7 @@ header {
   justify-content:flex-end;
   width: 100vw;
 }
+
 #linkDiv {
   margin-top: 3.75em;
   display: flex;
