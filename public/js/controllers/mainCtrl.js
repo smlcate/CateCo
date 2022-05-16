@@ -11,46 +11,46 @@ app.controller('mainCtrl', ['$scope', '$http', '$window', '$compile', '$location
     select:'',
     features: [
       {
-        full:'12,500',
-        red:'12,500',
+        full:'17,500',
+        red:'17,500',
         inc:'Included',
         price:'12,500'
       },
       {
-        full:'23,000',
-        red:'10,500',
+        full:'28,000',
+        red:'15,500',
         inc:'Included',
-        price:'23,000'
+        price:'28,000'
       },
       {
-        full:'7,500',
-        red:'4,750',
-        inc:'Included',
-        price:'7,500'
-      },
-      {
-        full:'11,000',
+        full:'12,500',
         red:'8,750',
         inc:'Included',
-        price:'11,000'
+        price:'12,500'
       },
       {
-        full:'30,000',
-        red:'22,000',
+        full:'16,000',
+        red:'13,750',
         inc:'Included',
-        price:'30,000'
+        price:'16,000'
       },
       {
-        full:'3,500',
-        red:'2,000',
+        full:'35,000',
+        red:'27,000',
         inc:'Included',
-        price:'3,500'
+        price:'35,000'
       },
       {
         full:'8,500',
         red:'7,000',
         inc:'Included',
         price:'8,500'
+      },
+      {
+        full:'13,500',
+        red:'12,000',
+        inc:'Included',
+        price:'13,500'
       },
     ]
   }
