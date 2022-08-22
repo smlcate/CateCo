@@ -107,7 +107,7 @@
 
       <div class="websitesHomeDivContainers" id="websitesHomeDivInfoContainer">
 
-        <div id="websitesPackagesHeader">
+        <!-- <div id="websitesPackagesHeader">
           <div id="websitesPackagesBundleHeaderTitle" class="websitesPackagesHeaderTitles">
             <h5>Website Bundles</h5>
             <div id="websiteHourlyCellSplitterE" class="websiteHourlyCellSplitters"></div>
@@ -115,7 +115,7 @@
           </div>
           <div id="websiteHourlyCellDividerD" class="websiteHourlyCellDividers"><p>•</p></div>
           <div id="websitesPackagesFeatureHeaderTitle" class="websitesPackagesHeaderTitles">
-            <!-- <h3>Additional</h3> -->
+
             <h5>Additional Features</h5>
             <div id="websiteHourlyCellSplitterA" class="websiteHourlyCellSplitters"></div>
             <p>Prices do not include full website development</p>
@@ -133,7 +133,7 @@
             <h3>$8,500</h3>
             <span class="priceInfoSpans">
               <p> + recurring maintenance, hosting & servicing fees</p>
-              <!-- <p class="markdownTexts">Saves $5,500</p> -->
+
             </span>
             <ul class="websitesHourlyInfoDivs">
               <li class="addListTexts">Industry competitive design & carefully crafted color scheme</li>
@@ -157,7 +157,7 @@
             <h3>$15,000</h3>
             <span class="priceInfoSpans">
               <p> + recurring maintenance, hosting & servicing fees</p>
-              <!-- <p class="markdownTexts">Saves $5,500</p> -->
+
             </span>
             <ul class="websitesHourlyInfoDivs">
               <li class="addListTexts">Industry competitive design & carefully crafted color scheme</li>
@@ -182,7 +182,7 @@
             <p>Starting from</p>
             <h3>$26,000</h3>
             <span class="priceInfoSpans">
-              <!-- <p class="markdownTexts">Saves $5,500</p> -->
+
               <p> + recurring maintenance, hosting & servicing fees</p>
             </span>
             <ul class="websitesHourlyInfoDivs">
@@ -210,7 +210,7 @@
             </div>
             <h3>Features</h3>
             <span class="priceInfoSpans">
-              <!-- <p class="markdownTexts">Saves $5,500</p> -->
+
               <p> + recurring maintenance, hosting & servicing fees</p>
             </span>
             <div class="websitesHourlyInfoDivs">
@@ -219,8 +219,6 @@
                 <h3>eCommerce Lite</h3>
                 <h3 id="ecomLiteFull" ng-if="packages.features[0].price != 'Included'" class="featureListCellHeaderPrices">+ ${{packages.features[0].price}}</h3>
                 <h3 id="ecomLiteFull" ng-if="packages.features[0].price == 'Included'" class="featureListCellHeaderPrices">{{packages.features[0].price}}</h3>
-                <!-- <h3 id="ecomLiteRed" class="featureListCellHeaderRedPrices">+ ${{packages.features[0].full}}</h3> -->
-                <!-- <h3 id="ecomLiteInc" class="featureListCellHeaderIncPrices">+ ${{packages.features[0].full}}</h3> -->
 
               </a>
               <ul class="featureListCells">
@@ -232,16 +230,13 @@
                 <li class="excListTexts">Email news & promotions</li>
               </ul>
               <div class="featureListCellSplitters">
-                <!-- <svg id="featureCellArrowsLeftSide" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 20 20" height="48px" viewBox="0 0 20 20" width="48px"><g><rect fill="none" height="20" width="20" x="0"/></g><g><g><polygon points="15,5.06 13.94,4 10,7.94 6.06,4 5,5.06 10,10.06"/><polygon points="15,11 13.94,9.94 10,13.88 6.06,9.94 5,11 10,16"/></g></g></svg>
-                  <svg id="featureCellArrowsRightSide" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 20 20" height="48px" viewBox="0 0 20 20" width="48px"><g><rect fill="none" height="20" width="20" x="0"/></g><g><g><polygon points="15,5.06 13.94,4 10,7.94 6.06,4 5,5.06 10,10.06"/><polygon points="15,11 13.94,9.94 10,13.88 6.06,9.94 5,11 10,16"/></g></g></svg> -->
-        </div>
+            </div>
         <a href="" id="featureListCellHeader1" class="featureListCellHeader" ng-click="selectFeature(1)">
           <h3>eCommerce Pro</h3>
           <h3 id="ecomLiteFull" ng-if="packages.features[1].price != 'Included'" class="featureListCellHeaderPrices">+ ${{packages.features[1].price}}</h3>
           <h3 id="ecomLiteFull" ng-if="packages.features[1].price == 'Included'" class="featureListCellHeaderPrices">{{packages.features[1].price}}</h3>          <!-- <h3 id="ecomProRed" class="featureListCellHeaderRedPrices">+ ${{packages.features[1].full}}</h3> -->
-          <!-- <h3 id="ecomProInc" class="featureListCellHeaderIncPrices">+ ${{packages.features[1].full}}</h3> -->
-        </a>
-        <ul class="featureListCells">
+        <!-- </a> -->
+        <!-- <ul class="featureListCells">
           <li class="addListTexts">Sell your products or services online</li>
           <li class="addListTexts">Secure payment verification & processing</li>
           <li class="addListTexts">Content management with secured administrator accounts & tools to handle your online shop</li>
@@ -250,15 +245,12 @@
           <li class="excListTexts">Customer email news & promotions</li>
         </ul>
         <div class="featureListCellSplitters">
-          <!-- <svg id="featureCellArrowsLeftSide" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 20 20" height="48px" viewBox="0 0 20 20" width="48px"><g><rect fill="none" height="20" width="20" x="0"/></g><g><g><polygon points="15,5.06 13.94,4 10,7.94 6.06,4 5,5.06 10,10.06"/><polygon points="15,11 13.94,9.94 10,13.88 6.06,9.94 5,11 10,16"/></g></g></svg>
-            <svg id="featureCellArrowsRightSide" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 20 20" height="48px" viewBox="0 0 20 20" width="48px"><g><rect fill="none" height="20" width="20" x="0"/></g><g><g><polygon points="15,5.06 13.94,4 10,7.94 6.06,4 5,5.06 10,10.06"/><polygon points="15,11 13.94,9.94 10,13.88 6.06,9.94 5,11 10,16"/></g></g></svg> -->
-          </div>
+        </div>
           <a href="" id="featureListCellHeader2" class="featureListCellHeader" ng-click="selectFeature(2)">
             <h3>Events Lite</h3>
             <h3 id="ecomLiteFull" ng-if="packages.features[2].price != 'Included'" class="featureListCellHeaderPrices">+ ${{packages.features[2].price}}</h3>
             <h3 id="ecomLiteFull" ng-if="packages.features[2].price == 'Included'" class="featureListCellHeaderPrices">{{packages.features[2].price}}</h3>            <!-- <h3 id="eventLiteRed" class="featureListCellHeaderRedPrices">+ ${{packages.features[2].full}}</h3> -->
-            <!-- <h3 id="eventLiteInc" class="featureListCellHeaderIncPrices">+ ${{packages.features[2].full}}</h3> -->
-          </a>
+          <!-- </a>
           <ul class="featureListCells">
             <li class="addListTexts">Schedule events</li>
             <li class="addListTexts">Schedule content management with secured administrator accounts</li>
@@ -269,15 +261,12 @@
 
           </ul>
           <div class="featureListCellSplitters">
-            <!-- <svg id="featureCellArrowsLeftSide" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 20 20" height="48px" viewBox="0 0 20 20" width="48px"><g><rect fill="none" height="20" width="20" x="0"/></g><g><g><polygon points="15,5.06 13.94,4 10,7.94 6.06,4 5,5.06 10,10.06"/><polygon points="15,11 13.94,9.94 10,13.88 6.06,9.94 5,11 10,16"/></g></g></svg>
-              <svg id="featureCellArrowsRightSide" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 20 20" height="48px" viewBox="0 0 20 20" width="48px"><g><rect fill="none" height="20" width="20" x="0"/></g><g><g><polygon points="15,5.06 13.94,4 10,7.94 6.06,4 5,5.06 10,10.06"/><polygon points="15,11 13.94,9.94 10,13.88 6.06,9.94 5,11 10,16"/></g></g></svg> -->
             </div>
             <a href="" id="featureListCellHeader3" class="featureListCellHeader" ng-click="selectFeature(3)">
               <h3>Events Pro</h3>
               <h3 id="ecomLiteFull" ng-if="packages.features[3].price != 'Included'" class="featureListCellHeaderPrices">+ ${{packages.features[3].price}}</h3>
               <h3 id="ecomLiteFull" ng-if="packages.features[3].price == 'Included'" class="featureListCellHeaderPrices">{{packages.features[3].price}}</h3>              <!-- <h3 id="eventPLusRed" class="featureListCellHeaderRedPrices">+ ${{packages.features[3].full}}</h3> -->
-              <!-- <h3 id="eventPLusInc" class="featureListCellHeaderIncPrices">+ ${{packages.features[3].full}}</h3> -->
-            </a>
+            <!-- </a>
             <ul class="featureListCells">
               <li class="addListTexts">Schedule events</li>
               <li class="addListTexts">Schedule content management with secured administrator accounts</li>
@@ -286,17 +275,14 @@
               <li class="addListTexts">Basic user accounts to encourage repeat business  & give customers access to handle their repeat payments & subscriptions</li>
               <li class="excListTexts">Customer email news & promotions</li>
 
-            </ul>
-            <div class="featureListCellSplitters">
-              <!-- <svg id="featureCellArrowsLeftSide" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 20 20" height="48px" viewBox="0 0 20 20" width="48px"><g><rect fill="none" height="20" width="20" x="0"/></g><g><g><polygon points="15,5.06 13.94,4 10,7.94 6.06,4 5,5.06 10,10.06"/><polygon points="15,11 13.94,9.94 10,13.88 6.06,9.94 5,11 10,16"/></g></g></svg>
-                <svg id="featureCellArrowsRightSide" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 20 20" height="48px" viewBox="0 0 20 20" width="48px"><g><rect fill="none" height="20" width="20" x="0"/></g><g><g><polygon points="15,5.06 13.94,4 10,7.94 6.06,4 5,5.06 10,10.06"/><polygon points="15,11 13.94,9.94 10,13.88 6.06,9.94 5,11 10,16"/></g></g></svg> -->
+            </ul> -->
+            <!-- <div class="featureListCellSplitters">
               </div>
               <a href="" id="featureListCellHeader4" class="featureListCellHeader" ng-click="selectFeature(4)">
                 <h3>Event-commerce</h3>
                 <h3 id="ecomLiteFull" ng-if="packages.features[4].price != 'Included'" class="featureListCellHeaderPrices">+ ${{packages.features[4].price}}</h3>
                 <h3 id="ecomLiteFull" ng-if="packages.features[4].price == 'Included'" class="featureListCellHeaderPrices">{{packages.features[4].price}}</h3>                <!-- <h3 id="eventComRed" class="featureListCellHeaderRedPrices">+ ${{packages.features[4].red}}</h3> -->
-                <!-- <h3 id="eventComInc" class="featureListCellHeaderIncPrices">+ ${{packages.features[4].inc}}</h3> -->
-              </a>
+              <!-- </a>
               <ul class="featureListCells">
                 <li class="addListTexts">Schedule events</li>
                 <li class="addListTexts">Sell tickets or registrations for events</li>
@@ -307,14 +293,11 @@
                 <li class="excListTexts">Email news & promotions</li>
               </ul>
               <div class="featureListCellSplitters">
-                <!-- <svg id="featureCellArrowsLeftSide" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 20 20" height="48px" viewBox="0 0 20 20" width="48px"><g><rect fill="none" height="20" width="20" x="0"/></g><g><g><polygon points="15,5.06 13.94,4 10,7.94 6.06,4 5,5.06 10,10.06"/><polygon points="15,11 13.94,9.94 10,13.88 6.06,9.94 5,11 10,16"/></g></g></svg>
-                  <svg id="featureCellArrowsRightSide" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 20 20" height="48px" viewBox="0 0 20 20" width="48px"><g><rect fill="none" height="20" width="20" x="0"/></g><g><g><polygon points="15,5.06 13.94,4 10,7.94 6.06,4 5,5.06 10,10.06"/><polygon points="15,11 13.94,9.94 10,13.88 6.06,9.94 5,11 10,16"/></g></g></svg> -->
                 </div>
                 <a href="" id="featureListCellHeader5" class="featureListCellHeader" ng-click="selectFeature(5)">
                   <h3>Appointment Lite</h3>
                   <h3 id="ecomLiteFull" ng-if="packages.features[5].price != 'Included'" class="featureListCellHeaderPrices">+ ${{packages.features[5].price}}</h3>
-                  <h3 id="ecomLiteFull" ng-if="packages.features[5].price == 'Included'" class="featureListCellHeaderPrices">{{packages.features[5].price}}</h3>                  <!-- <h3 id="appLiteRed" class="featureListCellHeaderRedPrices">+ $12,500</h3> -->
-                  <!-- <h3 id="appLiteInc" class="featureListCellHeaderIncPrices">+ $12,500</h3> -->
+                  <h3 id="ecomLiteFull" ng-if="packages.features[5].price == 'Included'" class="featureListCellHeaderPrices">{{packages.features[5].price}}</h3>
                 </a>
                 <ul class="featureListCells">
                   <li class="addListTexts">Allow guests to schedule appointments</li>
@@ -325,14 +308,11 @@
                   <li class="excListTexts">Email reminders of upcoming appointments & promotions</li>
                 </ul>
                 <div class="featureListCellSplitters">
-                  <!-- <svg id="featureCellArrowsLeftSide" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 20 20" height="48px" viewBox="0 0 20 20" width="48px"><g><rect fill="none" height="20" width="20" x="0"/></g><g><g><polygon points="15,5.06 13.94,4 10,7.94 6.06,4 5,5.06 10,10.06"/><polygon points="15,11 13.94,9.94 10,13.88 6.06,9.94 5,11 10,16"/></g></g></svg>
-                    <svg id="featureCellArrowsRightSide" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 20 20" height="48px" viewBox="0 0 20 20" width="48px"><g><rect fill="none" height="20" width="20" x="0"/></g><g><g><polygon points="15,5.06 13.94,4 10,7.94 6.06,4 5,5.06 10,10.06"/><polygon points="15,11 13.94,9.94 10,13.88 6.06,9.94 5,11 10,16"/></g></g></svg> -->
                   </div>
                   <a href="" id="featureListCellHeader6" class="featureListCellHeader" ng-click="selectFeature(6)">
                     <h3>Appointment Pro</h3>
                     <h3 id="ecomLiteFull" ng-if="packages.features[6].price != 'Included'" class="featureListCellHeaderPrices">+ ${{packages.features[6].price}}</h3>
-                    <h3 id="ecomLiteFull" ng-if="packages.features[6].price == 'Included'" class="featureListCellHeaderPrices">{{packages.features[6].price}}</h3>                    <!-- <h3 id="appProRed" class="featureListCellHeaderRedPrices">+ $12,500</h3> -->
-                    <!-- <h3 id="appProInc" class="featureListCellHeaderIncPrices">+ $12,500</h3> -->
+                    <h3 id="ecomLiteFull" ng-if="packages.features[6].price == 'Included'" class="featureListCellHeaderPrices">{{packages.features[6].price}}</h3>
                   </a>
                   <ul class="featureListCells">
                     <li class="addListTexts">Allow guests to schedule appointments</li>
@@ -347,11 +327,11 @@
 
 
               </div>
-            </div>
+            </div> -->
 
-            <div id="websitesPackagesHeader">
+            <!-- <div id="websitesPackagesHeader">
               <div id="websitesPackagesFeatureHeaderTitle" class="websitesPackagesHeaderTitles">
-                <!-- <h3>Additional</h3> -->
+
                 <h5>Website Maintenance</h5>
                 <div id="websiteHourlyCellSplitterA" class="websiteHourlyCellSplitters"></div>
                 <p>Required for projects medium or larger</p>
@@ -366,8 +346,6 @@
             <div id="websitesMaintenanceDisplay" class="websitesHourlyDisplays">
               <div class="websitesHourlyCells">
 
-                <!-- <h3>Website</h3>
-                <h5>Maintenance</h5> -->
                 <div class="websitesOptionCellHeaders">
                   <h3>5% project cost/yr.</h3>
                   <h5>0.4166%/mo</h5>
@@ -421,9 +399,9 @@
                 <p>Starts at</p>
                 <h3>$9,500</h3>
               </div>
-            </div>
+            </div> -->
 
-            <div id="websitesServicesDisplay" class="websitesHourlyDisplays">
+            <!-- <div id="websitesServicesDisplay" class="websitesHourlyDisplays">
 
               <div class="websitesHourlyCells">
                 <div class="websitesOptionCellHeaders">
@@ -473,14 +451,8 @@
                 <h5>plus 5% retainer/mo</h5>
               </div>
 
-            </div>
-            <!-- <div id="websitesPriceSelfEstDisplay" class="websitesHourlyDisplays">
-
-
-
             </div> -->
-
-            <div id="websitesByHourlyDisplay" class="websitesHourlyDisplays">
+          <div id="websitesByHourlyDisplay" class="websitesHourlyDisplays">
               <div class="websitesHourlyCells">
                 <div id="websitesHourlyCellHeaderB" class="websitesHourlyStaticCellHeaders">
                   <h3>UI/UX</h3>
@@ -571,15 +543,6 @@
         <div class="homeDivs">
 
           <div class="websitesHomeDivContainers" id="websitesScheduleDivNavContainer">
-
-
-            <!-- <div class="" id="websitesScheduleInformationDisplay">
-              <h3>Schedule a Meeting & Get a Quote</h3>
-              <p>If you're interested in contracting me for a project request a time and I will send an email confirming our meeting.</p> -->
-
-              <!-- <a id="websiteHourlyAnc" href="">Hourly</a> -->
-            <!-- </div> -->
-
             <div id="websitesScheduleHeaderTitle" class="websitesPackagesHeaderTitles">
               <h3>Get a Quote</h3>
               <div id="websiteHourlyCellSplitterF" class="websiteHourlyCellSplitters"></div>
@@ -603,10 +566,8 @@
                 <div class="scheduleDayManagerDateDisplays">
                   <div  ng-if="s.day > 0" ng-click="selectScheduleDay(s, $index)" class="scheduleDayCellDateDisplay">
                     <a href="" class="scheduleDayCellTexts">{{s.day}}</a>
-                    <!-- <p class="scheduleDayDeadCells" ng-if="s.day <= 0 && s.displayDate > 0">{{s.displayDate}}</p> -->
                   </div>
                   <div ng-if="s.day <= 0 && s.displayDate > 0" class="scheduleDayCellDateDisplay">
-                    <!-- <a href="" class="scheduleDayCellTexts" ng-if="s.day > 0">{{s.day}}</a> -->
                     <p class="scheduleDayDeadCells" >{{s.displayDate}}</p>
                   </div>
 
