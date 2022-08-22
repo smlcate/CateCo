@@ -1350,6 +1350,18 @@ and (-webkit-min-device-pixel-ratio: 2) {
   #welcomeHomeDiv {
 
   }
+  #welcomeHomeDiv h1 {
+    animation: none;
+  }
+  #titleA {
+    animation: none;
+  }
+  #titleB {
+    animation: none;
+  }
+  #titleC {
+    animation: none;
+  }
   #priceExplanationDisplay {
     /* width: 80vw;
     color: #FCFAF9; */
