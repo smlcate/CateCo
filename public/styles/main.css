@@ -276,12 +276,14 @@ header svg {
   animation-duration: 2.5s;
   animation-fill-mode: forwards;
   font-weight: bold;
+  overflow: visible;
 }
 
 #titleContainer p {
   font-size:1.5em;
   margin: 0px;
   font-weight: bold;
+  overflow: visible;
 }
 
 @keyframes titleALight {
