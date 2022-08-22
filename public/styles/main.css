@@ -38,9 +38,9 @@ header svg {
   z-index: 990;
 }
 #header-shape-gradient {
-  --color-stop: #62a4ed;
-  --color-mid: #EF5B5B;
-  --color-bot: #bc9bc8;
+  --stop: #62a4ed;
+  --mid: #EF5B5B;
+  --bot: #bc9bc8;
 }
 .githubIconAncs {
   fill:white;
@@ -71,6 +71,163 @@ header svg {
   /* box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.8); */
 }
 
+#resumeParentDiv {
+  color: #cdf0e7;
+  /* color: #CFD4C5; */
+  font-size: 2em;
+}
+.resumeInfoDivs {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  gap: 0em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  text-align: center;
+}
+
+.resumeInfoDivs p, h1, h4 {
+  /* padding-left: 1.5em; */
+  margin: 0em;
+  filter: drop-shadow(0px 2px 2px #222);
+}
+.resumeInfoDivs h4 {
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+}
+.resumeInfoDivs h3 {
+  /* max-height: 100%;
+  height: 100%; */
+  filter: drop-shadow(0px 2px 2px #222);
+  margin: 0em;
+  margin-top: .5em;
+  /* padding-left: 1em; */
+  text-decoration: underline;
+  /* margin-left: 1em; */
+}
+.resumeInfoDivs h1 {
+  /* border-bottom: 1px solid #cdf0e7; */
+}
+.resumeInfoDivs span {
+  display: flex;
+  align-items: center;
+}
+.resumeInfoDivs b {
+  font-size: 1.2em;
+}
+
+#resumeHeader {
+  font-size: 2em;
+  width: 100%;
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content: center;
+  /* background: grey;
+  color: #001524; */
+  background: #001524;
+  color: #cdf0e7;
+  /* color: #CFD4C5; */
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  /* box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.8); */
+  filter: drop-shadow(0px 2px 2px #222);
+  z-index: 999;
+}
+#resumeHeader h2, #resumeHeader p {
+  margin: 0em;
+}
+#resumeEducationDiv {
+  /* background: #cdf0e7; */
+  background: #62A4ED;
+  /* background: #CFD4C5; */
+  color: #001524;
+}
+#resumeExperienceDiv {
+  color: #001524;
+  background: #BC9BC8;
+}
+.resumeInfoWrappers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #cdf0e7;
+}
+#resumeSkillsDiv h3 {
+  /* width: 50%; */
+  text-decoration: none;
+}
+#resumeInterestsDiv h3 {
+  text-decoration: none;
+}
+#resumeSkillsDiv {
+  max-width: 50%;
+  background: #cdf0e7;
+  /* background: #CFD4C5; */
+  color: #001524;
+  align-items: center;
+}
+#resumeSkillsDiv p, #resumeSkillsDiv h1 {
+  filter: drop-shadow(0px 2px 2px #222);
+  /* width: 50%; */
+}
+#resumeSkillsDiv h1 {
+  margin-bottom: .5em;
+}
+.resumeInfoDivSplitters {
+  height: 1em;
+  z-index: 400;
+  background: #001524;
+  filter: drop-shadow(0px 3px 2px #222);
+  /* box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.8); */
+}
+#resumeInfoDivSplitter2 {
+  display: none;
+}
+.skillImageDivs {
+  /* width: 50%; */
+  padding-left: 2em;
+  padding-right: 2em;
+  filter: drop-shadow(0px 2px 2px #222);
+}
+#skillImage {
+  height: 2.5em;
+  width: 2.5em;
+}
+#skillImageNode {
+  height: 3.5em;
+  width: 3.5em;
+}
+#resumeAwardsDiv {
+  background: #BC9BC8;
+  color: #001524;
+  gap: 0.5em;
+  /* width: 50%; */
+  text-align: center;
+}
+#resumeLangsDiv {
+  background: #EF5B5B;
+  color: #001524;
+
+}
+#languagesContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.5em;
+  gap: 1em;
+}
+#resumeInterestsDiv {
+  background: #cdf0e7;
+  color: #001524;
+  max-width: 50%;
+}
+#resumeInterestsDiv p, h4 {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-align: center;
+  /* width: 50%; */
+}
 @keyframes bodyDarken {
   0% {
     background: #cdf0e7;
@@ -809,21 +966,21 @@ header svg {
   white-space: nowrap;
 }
 #websiteHourlyCellDividerB {
-  border-color: #EF5B5B;
+  border: #EF5B5B;
   color: #347FC4;
 }
 #websiteHourlyCellDividerC {
-  border-color: #7A5980;
+  border: #7A5980;
   color: #EF5B5B;
 }
 #websiteHourlyCellDividerD {
-  border-color: #7A5980;
+  border: #7A5980;
   color: #EF5B5B;
   margin: .5em;
   margin-top: 1em;
 }
 #websiteHourlyCellDividerG {
-  border-color: #347FC4;
+  border: #347FC4;
   color: #7A5980;
   margin: .5em;
   margin-top: 1em;
@@ -1129,6 +1286,37 @@ header svg {
 and (min-device-width: 320px)
 and (max-device-width: 600px)
 and (-webkit-min-device-pixel-ratio: 2) {
+  #resumeParentDiv {
+    font-size: 2.5em;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+  }
+  .resumeInfoDivs, .resumeInfoDivs p, .resumeInfoDivs h3 {
+    width: 100%;
+  }
+  .resumeInfoWrappers {
+    flex-direction: column;
+  }
+  #resumeInfoDivSplitter2 {
+    display: flex;
+  }
+  #resumeSkillsDiv, #resumeInterestsDiv {
+    max-width: 100%;
+    width: 100%;
+  }
+  #resumeSkillsDiv span {
+    width: 100%;
+    justify-content: center;
+  }
+  #resumeSkillsDiv h3 {
+    max-width: 50%;
+  }
+  #resumeInterestsDiv h3, #resumeInterestsDiv p {
+    /* padding-left: 1em;
+    padding-right: 1em; */
+  }
   #linkDiv {
     flex-direction: column;
     /* margin-top: 1em; */

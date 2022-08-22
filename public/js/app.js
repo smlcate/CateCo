@@ -11,5 +11,9 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: '/',
       templateUrl: '../partials/home.html'
   })
+  .state('resume', {
+      url: '/samcate',
+      templateUrl: '../partials/resume.html'
+  })
 
 });

@@ -71,6 +71,8 @@ app.controller('mainCtrl', ['$scope', '$http', '$window', '$compile', '$location
    summary:''
   };
 
+  
+
   function showNewPrices(p) {
     if(p == 0) {
 
