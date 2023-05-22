@@ -1263,6 +1263,12 @@ header svg {
   min-height:90vh;
   color: #FCFAF9;
   align-items: center;
+  /* padding-top: 1em; */
+}
+#workHomeDiv a {
+  width: 100%;
+  display: flex;
+  justify-content:center;
 }
 #websitesWorkHeaderTitle {
   position: -webkit-sticky; /* Safari & IE */
@@ -1281,6 +1287,7 @@ header svg {
 #workHomeDiv img {
   max-width: 50em;
   min-width: 5em;
+  margin-top: 1em;
 }
 #workNavSplitter {
   background: #347FC4;
